@@ -18,14 +18,15 @@ public class AdFlat extends AdRefactor {
   private static List<String> VALUABLE_WORDS = List.of("luminoso", "nuevo", "céntrico", "reformado", "ático");
 
   private Integer houseSize;
-  private Integer gardenSize;
+
+  // fixme: innecesario, un piso no tiene jardín (en teoría)
+//  private Integer gardenSize;
 
   @Override
   public boolean isComplete() {
     return !pictures.isEmpty()
            && hasDescription()
-           && houseSize != null
-           && gardenSize != null;
+           && houseSize != null;
   }
 
   @Override
